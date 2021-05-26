@@ -1,0 +1,28 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "1.2.0",
+  "iOS" : [
+    {
+      "swiftToolchainVersion" : "5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)",
+      "hash" : "1bb1e4482172f6d679829756403bbf54fb9ffd091b4b9db82bac43927970812f",
+      "name" : "KUIPopOver",
+      "container" : "KUIPopOver.xcframework",
+      "identifier" : "ios-arm64_i386_x86_64-simulator"
+    },
+    {
+      "swiftToolchainVersion" : "5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)",
+      "hash" : "22f9597030982b9d994d78641b26f38d9e9450ea511df4bd601cc8bd3a63f52c",
+      "name" : "KUIPopOver",
+      "container" : "KUIPopOver.xcframework",
+      "identifier" : "ios-arm64_armv7"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+framework module KUIPopOver {
+  umbrella header "KUIPopOver.h"
+
+  export *
+  module * { export * }
+}
+
+module KUIPopOver.Swift {
+    header "KUIPopOver-Swift.h"
+    requires objc
+}

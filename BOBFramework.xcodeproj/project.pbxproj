@@ -3,13 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9B69F2ED265E53B30075858D /* BOBFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B69F2E3265E53B20075858D /* BOBFramework.framework */; };
 		9B69F2F2265E53B30075858D /* BOBFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B69F2F1265E53B30075858D /* BOBFrameworkTests.swift */; };
 		9B69F2F4265E53B30075858D /* BOBFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B69F2E6265E53B20075858D /* BOBFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B69F36E265E5F450075858D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B69F36D265E5F440075858D /* Service.swift */; };
+		9B69F373265E5FCC0075858D /* KUIPopOver.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B69F372265E5FCB0075858D /* KUIPopOver.xcframework */; };
+		9B69F374265E5FCC0075858D /* KUIPopOver.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B69F372265E5FCB0075858D /* KUIPopOver.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +25,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9B69F375265E5FCC0075858D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9B69F374265E5FCC0075858D /* KUIPopOver.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9B69F2E3265E53B20075858D /* BOBFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BOBFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B69F2E6265E53B20075858D /* BOBFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BOBFramework.h; sourceTree = "<group>"; };
@@ -29,6 +46,8 @@
 		9B69F2EC265E53B30075858D /* BOBFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BOBFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B69F2F1265E53B30075858D /* BOBFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOBFrameworkTests.swift; sourceTree = "<group>"; };
 		9B69F2F3265E53B30075858D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B69F36D265E5F440075858D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		9B69F372265E5FCB0075858D /* KUIPopOver.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = KUIPopOver.xcframework; path = Carthage/Build/KUIPopOver.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B69F373265E5FCC0075858D /* KUIPopOver.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +76,7 @@
 				9B69F2E5265E53B20075858D /* BOBFramework */,
 				9B69F2F0265E53B30075858D /* BOBFrameworkTests */,
 				9B69F2E4265E53B20075858D /* Products */,
+				9B69F371265E5FCB0075858D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +94,7 @@
 			children = (
 				9B69F2E6265E53B20075858D /* BOBFramework.h */,
 				9B69F2E7265E53B20075858D /* Info.plist */,
+				9B69F36D265E5F440075858D /* Service.swift */,
 			);
 			path = BOBFramework;
 			sourceTree = "<group>";
@@ -84,6 +106,14 @@
 				9B69F2F3265E53B30075858D /* Info.plist */,
 			);
 			path = BOBFrameworkTests;
+			sourceTree = "<group>";
+		};
+		9B69F371265E5FCB0075858D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B69F372265E5FCB0075858D /* KUIPopOver.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +138,8 @@
 				9B69F2DF265E53B20075858D /* Sources */,
 				9B69F2E0265E53B20075858D /* Frameworks */,
 				9B69F2E1265E53B20075858D /* Resources */,
+				9B69F375265E5FCC0075858D /* Embed Frameworks */,
+				9B69F377265E60040075858D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -147,6 +179,7 @@
 				TargetAttributes = {
 					9B69F2E2265E53B20075858D = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 					};
 					9B69F2EB265E53B30075858D = {
 						CreatedOnToolsVersion = 12.0.1;
@@ -189,11 +222,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9B69F377265E60040075858D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/KUIPopOver.xcframework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/KUIPopOver.xcframework",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9B69F2DF265E53B20075858D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B69F36E265E5F450075858D /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +397,8 @@
 		9B69F2F8265E53B30075858D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -358,6 +416,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +425,8 @@
 		9B69F2F9265E53B30075858D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -391,6 +452,7 @@
 		9B69F2FB265E53B30075858D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BOBFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -408,6 +470,7 @@
 		9B69F2FC265E53B30075858D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BOBFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
