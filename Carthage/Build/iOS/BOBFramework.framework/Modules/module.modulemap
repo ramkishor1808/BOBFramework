@@ -1,0 +1,6 @@
+framework module BOBFramework {
+  umbrella header "BOBFramework.h"
+
+  export *
+  module * { export * }
+}
