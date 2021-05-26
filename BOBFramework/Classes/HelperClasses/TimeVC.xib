@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="montserrat_bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeVC" customModule="AhaCustomer" customModuleProvider="target">
+            <connections>
+                <outlet property="dateView" destination="tYW-hN-dwK" id="LQf-2q-2mS"/>
+                <outlet property="timePicker" destination="QBx-cZ-pAK" id="4o4-sX-57F"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJr-16-dUB">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <visualEffectView opaque="NO" alpha="0.64999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NA3-NY-wsj">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DdG-8j-80O">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <vibrancyEffect>
+                                <blurEffect style="light"/>
+                            </vibrancyEffect>
+                        </visualEffectView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYW-hN-dwK">
+                            <rect key="frame" x="20.5" y="225" width="373" height="368"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoY-1o-zyJ">
+                                    <rect key="frame" x="37.5" y="8" width="298" height="27"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QBx-cZ-pAK">
+                                    <rect key="frame" x="0.0" y="77.5" width="373" height="213"/>
+                                    <date key="date" timeIntervalSinceReferenceDate="559125582.98502696">
+                                        <!--2018-09-20 08:39:42 +0000-->
+                                    </date>
+                                </datePicker>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fph-Is-MPj">
+                                    <rect key="frame" x="112" y="316" width="149" height="44"/>
+                                    <color key="backgroundColor" red="0.26274509800000001" green="0.55294117649999996" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <state key="normal" title="DONE">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="doneBtn:" destination="-1" eventType="touchUpInside" id="BO8-Jt-h5c"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="QBx-cZ-pAK" firstAttribute="height" secondItem="tYW-hN-dwK" secondAttribute="height" multiplier="0.58" id="1PP-1q-4r5"/>
+                                <constraint firstItem="ZoY-1o-zyJ" firstAttribute="top" secondItem="tYW-hN-dwK" secondAttribute="top" constant="8" id="96L-Vm-Fiw"/>
+                                <constraint firstItem="fph-Is-MPj" firstAttribute="width" secondItem="tYW-hN-dwK" secondAttribute="width" multiplier="0.4" id="96g-Mc-wYe"/>
+                                <constraint firstItem="QBx-cZ-pAK" firstAttribute="centerX" secondItem="tYW-hN-dwK" secondAttribute="centerX" id="Dxj-Re-NbD"/>
+                                <constraint firstItem="fph-Is-MPj" firstAttribute="height" secondItem="tYW-hN-dwK" secondAttribute="height" multiplier="0.12" id="FsA-hq-FDf"/>
+                                <constraint firstItem="ZoY-1o-zyJ" firstAttribute="centerX" secondItem="tYW-hN-dwK" secondAttribute="centerX" id="Tcm-iJ-elH"/>
+                                <constraint firstItem="QBx-cZ-pAK" firstAttribute="width" secondItem="tYW-hN-dwK" secondAttribute="width" id="a5M-ef-vgq"/>
+                                <constraint firstItem="fph-Is-MPj" firstAttribute="centerX" secondItem="tYW-hN-dwK" secondAttribute="centerX" id="bDX-Ak-eMV"/>
+                                <constraint firstItem="ZoY-1o-zyJ" firstAttribute="width" secondItem="tYW-hN-dwK" secondAttribute="width" multiplier="0.8" id="fIM-ZS-ff2"/>
+                                <constraint firstItem="QBx-cZ-pAK" firstAttribute="centerY" secondItem="tYW-hN-dwK" secondAttribute="centerY" id="jMM-Zf-9bb"/>
+                                <constraint firstAttribute="bottom" secondItem="fph-Is-MPj" secondAttribute="bottom" constant="8" id="rBL-xh-0JH"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="NA3-NY-wsj" firstAttribute="leading" secondItem="iJr-16-dUB" secondAttribute="leading" id="0n0-Yx-TpE"/>
+                        <constraint firstItem="tYW-hN-dwK" firstAttribute="height" secondItem="iJr-16-dUB" secondAttribute="height" multiplier="0.45" id="865-r3-T8X"/>
+                        <constraint firstItem="tYW-hN-dwK" firstAttribute="centerX" secondItem="iJr-16-dUB" secondAttribute="centerX" id="8SZ-MC-PcB"/>
+                        <constraint firstAttribute="trailing" secondItem="NA3-NY-wsj" secondAttribute="trailing" id="It3-Rm-Mta"/>
+                        <constraint firstItem="tYW-hN-dwK" firstAttribute="width" secondItem="iJr-16-dUB" secondAttribute="width" multiplier="0.9" id="QN1-Vr-BeO"/>
+                        <constraint firstItem="tYW-hN-dwK" firstAttribute="centerY" secondItem="iJr-16-dUB" secondAttribute="centerY" id="Zub-dW-qAS"/>
+                        <constraint firstItem="NA3-NY-wsj" firstAttribute="top" secondItem="iJr-16-dUB" secondAttribute="top" id="eLi-Zl-hr9"/>
+                        <constraint firstAttribute="bottom" secondItem="NA3-NY-wsj" secondAttribute="bottom" id="xBV-zo-gb7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iJr-16-dUB" secondAttribute="trailing" id="UI2-ef-tzm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iJr-16-dUB" secondAttribute="bottom" id="a5F-Ib-qMQ"/>
+                <constraint firstItem="iJr-16-dUB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="mfq-ia-HvD"/>
+                <constraint firstItem="iJr-16-dUB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="q45-qr-SNQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

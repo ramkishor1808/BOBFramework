@@ -1,1 +1,4 @@
 github "Kofktu/KUIPopOver"
+github "danielgindi/Charts" ~> 4.0.0
+github "krzyzanowskim/CryptoSwift"
+github "thii/FontAwesome.swift"

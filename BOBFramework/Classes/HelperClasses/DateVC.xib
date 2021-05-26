@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="montserrat_bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DateVC" customModule="AhaCustomer" customModuleProvider="target">
+            <connections>
+                <outlet property="datePicker" destination="s7R-wZ-AtJ" id="dwp-q9-RMF"/>
+                <outlet property="dateView" destination="lKf-kL-aW6" id="pJ1-ky-L1Q"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ht5-br-SXJ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <visualEffectView opaque="NO" alpha="0.64999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rds-ED-ZsG">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QV0-bX-hTY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <vibrancyEffect>
+                                <blurEffect style="light"/>
+                            </vibrancyEffect>
+                        </visualEffectView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKf-kL-aW6">
+                            <rect key="frame" x="31" y="225" width="352" height="368"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSP-Du-AfG">
+                                    <rect key="frame" x="35" y="8" width="282" height="27"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="s7R-wZ-AtJ">
+                                    <rect key="frame" x="0.0" y="64.5" width="352" height="239"/>
+                                    <date key="date" timeIntervalSinceReferenceDate="559209710.10052395">
+                                        <!--2018-09-21 08:01:50 +0000-->
+                                    </date>
+                                </datePicker>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfL-PP-rCp">
+                                    <rect key="frame" x="105.5" y="321" width="141" height="44"/>
+                                    <color key="backgroundColor" red="0.26274509800000001" green="0.55294117649999996" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <state key="normal" title="DONE">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="doneBtn:" destination="-1" eventType="touchUpInside" id="K06-1k-XA1"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="GfL-PP-rCp" firstAttribute="centerX" secondItem="lKf-kL-aW6" secondAttribute="centerX" id="0GR-px-pQt"/>
+                                <constraint firstItem="s7R-wZ-AtJ" firstAttribute="centerX" secondItem="lKf-kL-aW6" secondAttribute="centerX" id="23g-Eh-ZwS"/>
+                                <constraint firstItem="GfL-PP-rCp" firstAttribute="width" secondItem="lKf-kL-aW6" secondAttribute="width" multiplier="0.4" id="O50-S8-asF"/>
+                                <constraint firstItem="s7R-wZ-AtJ" firstAttribute="height" secondItem="lKf-kL-aW6" secondAttribute="height" multiplier="0.65" id="S9W-N8-vpu"/>
+                                <constraint firstItem="zSP-Du-AfG" firstAttribute="top" secondItem="lKf-kL-aW6" secondAttribute="top" constant="8" id="YtU-Wa-lBi"/>
+                                <constraint firstItem="GfL-PP-rCp" firstAttribute="height" secondItem="lKf-kL-aW6" secondAttribute="height" multiplier="0.12" id="aHd-rM-c4y"/>
+                                <constraint firstItem="zSP-Du-AfG" firstAttribute="width" secondItem="lKf-kL-aW6" secondAttribute="width" multiplier="0.8" id="dk5-4q-PBJ"/>
+                                <constraint firstItem="zSP-Du-AfG" firstAttribute="centerX" secondItem="lKf-kL-aW6" secondAttribute="centerX" id="gOE-5D-L7a"/>
+                                <constraint firstItem="s7R-wZ-AtJ" firstAttribute="width" secondItem="lKf-kL-aW6" secondAttribute="width" id="lKq-eR-Vjp"/>
+                                <constraint firstAttribute="bottom" secondItem="GfL-PP-rCp" secondAttribute="bottom" constant="3" id="svO-Em-Ym0"/>
+                                <constraint firstItem="s7R-wZ-AtJ" firstAttribute="centerY" secondItem="lKf-kL-aW6" secondAttribute="centerY" id="wJR-CR-JTg"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="lKf-kL-aW6" firstAttribute="width" secondItem="Ht5-br-SXJ" secondAttribute="width" multiplier="0.85" id="0L1-81-ONM"/>
+                        <constraint firstItem="Rds-ED-ZsG" firstAttribute="leading" secondItem="Ht5-br-SXJ" secondAttribute="leading" id="4nN-kY-9I2"/>
+                        <constraint firstAttribute="bottom" secondItem="Rds-ED-ZsG" secondAttribute="bottom" id="5h5-3e-rKu"/>
+                        <constraint firstAttribute="trailing" secondItem="Rds-ED-ZsG" secondAttribute="trailing" id="JFM-DH-IfK"/>
+                        <constraint firstItem="Rds-ED-ZsG" firstAttribute="top" secondItem="Ht5-br-SXJ" secondAttribute="top" id="mVv-XQ-xSJ"/>
+                        <constraint firstItem="lKf-kL-aW6" firstAttribute="centerY" secondItem="Ht5-br-SXJ" secondAttribute="centerY" id="pj6-VW-EEO"/>
+                        <constraint firstItem="lKf-kL-aW6" firstAttribute="height" secondItem="Ht5-br-SXJ" secondAttribute="height" multiplier="0.45" id="wip-HC-7bh"/>
+                        <constraint firstItem="lKf-kL-aW6" firstAttribute="centerX" secondItem="Ht5-br-SXJ" secondAttribute="centerX" id="ypm-fr-agk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ht5-br-SXJ" secondAttribute="bottom" id="hbG-Xk-G1F"/>
+                <constraint firstItem="Ht5-br-SXJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jqE-tj-532"/>
+                <constraint firstItem="Ht5-br-SXJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="l2a-wy-JnA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ht5-br-SXJ" secondAttribute="trailing" id="plF-mq-NS4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
